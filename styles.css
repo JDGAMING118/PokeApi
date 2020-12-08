@@ -93,10 +93,11 @@
   margin-right: 3rem;
 }
 
-#container #header #text svg {
-  margin-top: 10px;
-  width: 40px;
-  height: 40px;
+#container #header #text button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: #FF4141;
 }
 
 #container #header #image {

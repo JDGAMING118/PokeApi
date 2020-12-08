@@ -70,10 +70,12 @@ $primary-font:'Varela Round', sans-serif;
                 margin-right: 3rem;
             }
             
-            svg{
-                margin-top: 10px;
-                width: 40px;
-                height: 40px;
+            button{
+                // margin-top: 10px;
+                width: 60px;
+                height: 60px;
+                border: none;
+                background-color:$primary-color;
                 // margin-right: 0rem;
             }
         }
