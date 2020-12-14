@@ -1,44 +1,52 @@
 $primary-color:#FF4141;
-$primary-font:'Varela Round', sans-serif;
+$primary-font:'Varela Round',
+sans-serif;
 
-#container{
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
     font-family: $primary-font;
-    
-    #header{
+
+    #header {
         display: flex;
-        #text{
+
+        #text {
             flex-direction: column;
             justify-content: center;
             display: flex;
             color: white;
             background-color: $primary-color;
-            flex:6;
-        
-            div:first-child{
+            flex: 6;
+
+            div:first-child {
                 justify-content: flex-start;
-                display: flex; 
+                display: flex;
                 flex: 1;
-        
-                a{
+
+                a {
                     text-decoration: none;
                     text-align: center;
-                    border-radius:1rem;
+                    border-radius: 1rem;
                     font-size: 1rem;
-                    color:black;
+                    color: black;
                     margin-top: 1rem;
                     margin-right: 5rem;
                     background-color: white;
                     width: 5rem;
                     height: 2rem;
                 }
-        
-                input{
+
+                input {
                     outline: none;
                     margin-top: 1rem;
                     border-radius: 1rem;
                     text-align: center;
                     border: solid white;
-                    &:focus{
+
+                    &:focus {
                         margin-top: 1rem;
                         border-radius: 1rem;
                         text-align: center;
@@ -47,48 +55,57 @@ $primary-font:'Varela Round', sans-serif;
                     }
                 }
             }
-        
-            div:nth-child(2){
+
+            div:nth-child(2) {
                 display: flex;
-                flex:1;
-        
-                h2{
+                flex: 1;
+
+                h2 {
                     font-size: 100px;
                     margin-bottom: 5rem;
                 }
             }
-        
-            p{
+
+            p {
                 font-size: 30px;
                 margin-left: 1rem;
             }
 
-            #pokeball{
+            #pokeball {
                 width: 90px;
                 height: 90px;
                 margin-left: 1rem;
                 margin-right: 3rem;
             }
-            
-            button{
-                // margin-top: 10px;
-                width: 60px;
+
+            button {
+                // // margin-top: 10px;
+                // width: 60px;
                 height: 60px;
                 border: none;
-                background-color:$primary-color;
-                // margin-right: 0rem;
+                background-color: $primary-color;
+
+                :active {
+                    border: none;
+                    outline: none;
+                }
+
+                :focus {
+                    border: none;
+                    outline: none;
+                }
             }
         }
-        
-        
-        
-        
-        #image{
+
+
+
+
+        #image {
             background-color: $primary-color;
-            flex:6;
-            
-        
-            img{
+            flex: 6;
+
+
+            img {
                 margin-left: 10rem;
                 max-width: 100%;
                 height: 100%;
@@ -96,53 +113,97 @@ $primary-font:'Varela Round', sans-serif;
         }
     }
 
-    #content1{
+    #content1 {
         display: flex;
 
-        & div:first-child{
+        & div:first-child {
             flex: 1;
-            img{
+
+            img {
                 margin: 2rem;
                 width: 500px;
-                height: 500px;  
-              }
+                height: 500px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
-        & div:nth-child(2){
+        & div:nth-child(2) {
             flex: 1;
             align-self: center;
-            
-            h1{
+
+            h1 {
                 font-size: 80px;
                 color: $primary-color;
             }
         }
 
-        
+
     }
 
-    #content2{
+    #content2 {
         display: flex;
+        justify-content: center;
+        /* align horizontal */
+        align-items: center;
 
-        & div:first-child{
+        /* align vertical */
+        & div:first-child {
             flex: 1;
-            align-self: center;
-            
-            h1{
+
+            h1 {
                 font-size: 80px;
                 color: $primary-color;
             }
         }
 
-        & div:nth-child(2){
+        & div:nth-child(2) {
             flex: 1;
-            img{
+
+            img {
+
                 margin: 2rem;
                 width: 500px;
-                height: 500px;  
-              }
+                height: 500px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
     }
 
 }
 
+.modalBg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: .5);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity .5s;
+}
+
+.modalActive {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity .5s;
+}
+
+.modalContent {
+    color: $primary-color;
+    background-color: white;
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
