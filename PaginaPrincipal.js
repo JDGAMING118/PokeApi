@@ -12,12 +12,21 @@ const PokeFetch = async (id) => {
 
 }
 
+let search = document.getElementById('search');
+
+search.addEventListener('keyup', e => {
+    let value = e.target.value;
+    renderModal(value)
+
+})
 
 let searchBtn = document.getElementById('searchBtn');
 searchBtn.addEventListener('click', () => {
+
     renderModal();
 })
 
+let modalBg = document.querySelector('.modalBg');
 modalBg.addEventListener('click', () => {
     modalBg.classList.remove('modalActive');
 

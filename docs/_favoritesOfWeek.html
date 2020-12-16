@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/_favoritesCard.css">
+    <title>Favorites of week</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>The favorites of the week</h1>
+        <h2>In this section you can see the pokemons most voted peer week</h2>
+        <h2>The list here</h2>
+
+        <div id="dinamicCard">
+
+        </div>
+
+        <template id="templateCard">
+            <div class="cardContent">
+                <img id="sprite">
+                <h2>Name of Pokemon</h2>
+                <p id="name"></p>
+                <h2>Abilfities</h2>
+                <p id="abilities"></p>
+            </div>
+        </template>
+    </main>
+
+    <script type="module" src="../_renderCard.js"></script>
+</body>
+
+</html>

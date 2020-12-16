@@ -1,0 +1,119 @@
+$primary-color:#FF4141;
+$primary-font:'Montserrat Alternates';
+
+#content1 {
+    display: flex;
+
+    & div:first-child {
+        flex: 1;
+
+        img {
+            margin: 2rem;
+            width: 500px;
+            height: 500px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    & div:nth-child(2) {
+        flex: 1;
+        align-self: center;
+
+        h1 {
+            font-size: 80px;
+            color: $primary-color;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50%;
+
+
+
+        div:first-child {
+            display: block;
+            text-align: center;
+
+            img {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        }
+
+        div:nth-child(2) {
+            display: block;
+        }
+    }
+
+
+}
+
+#content2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* align vertical */
+    & div:first-child {
+        flex: 1;
+        margin-left: 2rem;
+
+        h1 {
+            font-size: 80px;
+            color: $primary-color;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            border-radius: 1rem;
+            transition: all .4s;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-align: center;
+            transform: translateY(-4px);
+            box-shadow: 0px 10px #dddddd;
+        }
+    }
+
+    & div:nth-child(2) {
+        flex: 1;
+        margin-left: 4rem;
+
+        img {
+            width: 500px;
+            height: 500px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50%;
+        margin-bottom: 1rem;
+
+        div:first-child {
+
+            text-align: center;
+            // margin-top: 5rem;
+
+            img {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        }
+    }
+}
